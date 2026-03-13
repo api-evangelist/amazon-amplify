@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.org/",
+    "amplify": "https://docs.aws.amazon.com/amplify/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "iam": "https://docs.aws.amazon.com/IAM/latest/UserGuide/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema": "https://schema.org/",
+
+    "App": {
+      "@id": "amplify:API_CreateApp.html",
+      "@context": {
+        "appId": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@id": "schema:description",
+          "@type": "xsd:string"
+        },
+        "appArn": {
+          "@id": "aws:arn",
+          "@type": "@id"
+        },
+        "repository": {
+          "@id": "schema:codeRepository",
+          "@type": "@id"
+        },
+        "platform": {
+          "@id": "amplify:Platform",
+          "@type": "xsd:string"
+        },
+        "createTime": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "updateTime": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        },
+        "defaultDomain": {
+          "@id": "schema:url",
+          "@type": "@id"
+        }
+      }
+    },
+
+    "Branch": {
+      "@id": "amplify:API_CreateBranch.html",
+      "@context": {
+        "branchName": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "branchArn": {
+          "@id": "aws:arn",
+          "@type": "@id"
+        },
+        "stage": {
+          "@id": "amplify:Stage",
+          "@type": "xsd:string"
+        },
+        "displayName": {
+          "@id": "schema:alternateName",
+          "@type": "xsd:string"
+        }
+      }
+    },
+
+    "DomainAssociation": {
+      "@id": "amplify:API_CreateDomainAssociation.html",
+      "@context": {
+        "domainName": {
+          "@id": "schema:domainName",
+          "@type": "xsd:string"
+        },
+        "domainStatus": {
+          "@id": "amplify:DomainStatus",
+          "@type": "xsd:string"
+        },
+        "certificateVerificationDNSRecord": {
+          "@id": "amplify:CertificateVerification",
+          "@type": "xsd:string"
+        }
+      }
+    }
+  }
+}
