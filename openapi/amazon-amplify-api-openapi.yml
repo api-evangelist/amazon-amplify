@@ -62,6 +62,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListAppsResult'
+      tags:
+        - Apps
     post:
       summary: Amazon Amplify Create App
       description: Creates a new Amplify app.
@@ -79,6 +81,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CreateAppResult'
+      tags:
+        - Apps
   /apps/{appId}:
     get:
       summary: Amazon Amplify Get App
@@ -97,6 +101,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetAppResult'
+      tags:
+        - Apps
     post:
       summary: Amazon Amplify Update App
       description: Updates an existing Amplify app.
@@ -115,6 +121,8 @@ paths:
       responses:
         '200':
           description: Successful response
+      tags:
+        - Apps
     delete:
       summary: Amazon Amplify Delete App
       description: Deletes an existing Amplify app specified by an app ID.
@@ -128,6 +136,8 @@ paths:
       responses:
         '200':
           description: Successful response
+      tags:
+        - Apps
   /apps/{appId}/branches:
     get:
       summary: Amazon Amplify List Branches
@@ -142,6 +152,8 @@ paths:
       responses:
         '200':
           description: Successful response
+      tags:
+        - Apps
     post:
       summary: Amazon Amplify Create Branch
       description: Creates a new branch for an Amplify app.
@@ -161,6 +173,8 @@ paths:
       responses:
         '200':
           description: Successful response
+      tags:
+        - Apps
   /apps/{appId}/domains:
     get:
       summary: Amazon Amplify List Domain Associations
@@ -175,6 +189,8 @@ paths:
       responses:
         '200':
           description: Successful response
+      tags:
+        - Apps
     post:
       summary: Amazon Amplify Create Domain Association
       description: Creates a new domain association for an Amplify app.
@@ -194,6 +210,8 @@ paths:
       responses:
         '200':
           description: Successful response
+      tags:
+        - Apps
 components:
   securitySchemes:
     sigv4:
@@ -328,3 +346,5 @@ components:
                 type: string
               branchName:
                 type: string
+tags:
+  - name: Apps
