@@ -1,0 +1,7 @@
+{
+  "name": "example-name",
+  "description": "example-description",
+  "repository": "example-repository",
+  "platform": "example-platform",
+  "oauthToken": "example-oauthToken"
+}

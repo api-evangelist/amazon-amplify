@@ -1,0 +1,96 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Amplify API
+  description: Shared capability for managing Amplify apps, branches, deployments, and domain associations.
+  tags:
+  - Amazon
+  - Amplify
+  - AWS
+  - Frontend
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-amplify
+    baseUri: https://amplify.amazonaws.com
+    description: Amazon Amplify REST API
+    authentication:
+      type: aws-sigv4
+      service: amplify
+    resources:
+    - name: apps
+      path: /apps
+      description: Manage Amplify applications.
+      operations:
+      - name: list-apps
+        method: GET
+        description: List all Amplify apps.
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: create-app
+        method: POST
+        description: Create a new Amplify app.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          required: true
+          description: App creation parameters.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8112
+    namespace: amazon-amplify-api
+    resources:
+    - path: /v1/apps
+      name: apps
+      operations:
+      - method: GET
+        name: list-apps
+        description: List Amplify apps.
+        call: amazon-amplify.list-apps
+        with: {}
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9112
+    namespace: amazon-amplify-mcp
+    transport: http
+    tools:
+    - name: list-amplify-apps
+      description: List all Amazon Amplify applications in the account.
+      hints:
+        readOnly: true
+        openWorld: false
+      call: amazon-amplify.list-apps
+      with: {}
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-amplify-app
+      description: Create a new Amazon Amplify application with connected repository.
+      hints:
+        readOnly: false
+        openWorld: false
+      call: amazon-amplify.create-app
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

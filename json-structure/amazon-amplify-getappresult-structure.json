@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "GetAppResult",
+  "type": "record",
+  "fields": [
+    {
+      "name": "app",
+      "type": "string"
+    }
+  ]
+}

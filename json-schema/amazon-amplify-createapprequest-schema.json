@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CreateAppRequest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "oauthToken": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

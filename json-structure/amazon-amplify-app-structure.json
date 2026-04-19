@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "App",
+  "type": "record",
+  "fields": [
+    {
+      "name": "appId",
+      "type": "string",
+      "description": "The unique ID of the Amplify app."
+    },
+    {
+      "name": "appArn",
+      "type": "string",
+      "description": "The Amazon Resource Name (ARN) of the Amplify app."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "The name of the Amplify app."
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "description": "The description of the Amplify app."
+    },
+    {
+      "name": "repository",
+      "type": "string",
+      "description": "The Git repository for the Amplify app."
+    },
+    {
+      "name": "platform",
+      "type": "string"
+    },
+    {
+      "name": "createTime",
+      "type": "datetime"
+    },
+    {
+      "name": "updateTime",
+      "type": "datetime"
+    },
+    {
+      "name": "defaultDomain",
+      "type": "string"
+    },
+    {
+      "name": "productionBranch",
+      "type": "string"
+    }
+  ]
+}

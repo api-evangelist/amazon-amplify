@@ -1,0 +1,8 @@
+{
+  "branchName": "example-branchName",
+  "branchArn": "example-branchArn",
+  "description": "example-description",
+  "stage": "PRODUCTION",
+  "displayName": "example-displayName",
+  "activeJobId": "example-activeJobId"
+}

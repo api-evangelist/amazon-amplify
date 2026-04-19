@@ -1,0 +1,112 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Amplify
+  description: Vocabulary for the Amazon Amplify API surface covering app management, branch management, and deployment operations.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - namespace: amazon-amplify
+    name: Amazon Amplify REST API
+    version: '2017-07-25'
+    baseUrl: https://amplify.amazonaws.com
+    status: active
+  resources:
+  - name: apps
+    description: Amplify applications with connected repositories and build settings.
+    apis:
+    - amazon-amplify
+    actions:
+    - list
+    - create
+    - get
+    - update
+    - delete
+  - name: branches
+    description: Git branches connected to Amplify apps for deployment.
+    apis:
+    - amazon-amplify
+    actions:
+    - list
+    - create
+    - get
+    - update
+    - delete
+  - name: deployments
+    description: Build and deployment jobs for Amplify branches.
+    apis:
+    - amazon-amplify
+    actions:
+    - list
+    - start
+    - stop
+    - get
+  actions:
+  - name: list
+    description: List resources.
+    httpMethod: GET
+    pattern: query
+  - name: create
+    description: Create a resource.
+    httpMethod: POST
+    pattern: write
+  - name: get
+    description: Get a specific resource.
+    httpMethod: GET
+    pattern: read
+  - name: update
+    description: Update a resource.
+    httpMethod: POST
+    pattern: write
+  - name: delete
+    description: Delete a resource.
+    httpMethod: DELETE
+    pattern: delete
+  - name: start
+    description: Start a job or deployment.
+    httpMethod: POST
+    pattern: write
+  - name: stop
+    description: Stop a running job.
+    httpMethod: DELETE
+    pattern: delete
+  authentication:
+    schemes:
+    - type: aws-sigv4
+      description: AWS Signature Version 4 authentication.
+      service: amplify
+capability:
+  workflows:
+  - name: Amplify App Management
+    file: capabilities/amplify-app-management.yaml
+    description: Manage Amplify apps, branches, and deployments.
+    apisCombined:
+    - Amazon Amplify REST API
+    toolCount: 2
+    personas:
+    - Frontend Developer
+    - DevOps Engineer
+  personas:
+  - id: frontend-developer
+    name: Frontend Developer
+    description: Developer building and deploying web and mobile frontends on AWS Amplify.
+    workflows:
+    - Amplify App Management
+  - id: devops-engineer
+    name: DevOps Engineer
+    description: Engineer managing CI/CD pipelines and deployments for Amplify applications.
+    workflows:
+    - Amplify App Management
+  namespaces:
+    consumed:
+    - amazon-amplify
+    rest:
+    - amplify-management-api (port 8080)
+    - amazon-amplify-api (port 8112)
+    mcp:
+    - amplify-management-mcp (port 9090)
+    - amazon-amplify-mcp (port 9112)
+  binds:
+  - AWS_ACCESS_KEY_ID
+  - AWS_SECRET_ACCESS_KEY
+  - AWS_REGION

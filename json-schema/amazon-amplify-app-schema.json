@@ -1,135 +1,49 @@
 {
-  "$id": "https://schema.api.io/amazon-amplify/amazon-amplify-app-schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Amazon Amplify App",
-  "description": "Schema representing an AWS Amplify application resource. An Amplify app provides a Git-based workflow for building, deploying, and hosting full-stack web and mobile applications.",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "App",
   "type": "object",
-  "required": [
-    "appId",
-    "name"
-  ],
   "properties": {
     "appId": {
       "type": "string",
-      "description": "The unique identifier for the Amplify app.",
-      "minLength": 1,
-      "maxLength": 20
+      "description": "The unique ID of the Amplify app."
     },
     "appArn": {
       "type": "string",
-      "description": "The Amazon Resource Name (ARN) of the Amplify app.",
-      "pattern": "^arn:aws:amplify:[a-z0-9-]+:[0-9]{12}:apps/[a-z0-9]+$"
+      "description": "The Amazon Resource Name (ARN) of the Amplify app."
     },
     "name": {
       "type": "string",
-      "description": "The name of the Amplify app.",
-      "minLength": 1,
-      "maxLength": 255
+      "description": "The name of the Amplify app."
     },
     "description": {
       "type": "string",
-      "description": "The description for the Amplify app.",
-      "maxLength": 1000
+      "description": "The description of the Amplify app."
     },
     "repository": {
       "type": "string",
-      "description": "The Git repository for the Amplify app.",
-      "maxLength": 1000
+      "description": "The Git repository for the Amplify app."
     },
     "platform": {
       "type": "string",
-      "description": "The platform for the Amplify app.",
-      "enum": ["WEB", "WEB_DYNAMIC", "WEB_COMPUTE"]
+      "enum": [
+        "WEB",
+        "WEB_DYNAMIC",
+        "WEB_COMPUTE"
+      ]
     },
     "createTime": {
       "type": "string",
-      "format": "date-time",
-      "description": "Creates a date and time for the Amplify app."
+      "format": "date-time"
     },
     "updateTime": {
       "type": "string",
-      "format": "date-time",
-      "description": "Updates a date and time for the Amplify app."
+      "format": "date-time"
     },
     "defaultDomain": {
-      "type": "string",
-      "description": "The default domain for the Amplify app.",
-      "examples": ["d111111abcdef8.amplifyapp.com"]
-    },
-    "environmentVariables": {
-      "type": "object",
-      "description": "The environment variables for the Amplify app.",
-      "additionalProperties": {
-        "type": "string"
-      }
-    },
-    "customRules": {
-      "type": "array",
-      "description": "Describes the custom redirect and rewrite rules for the Amplify app.",
-      "items": {
-        "$ref": "#/$defs/CustomRule"
-      }
+      "type": "string"
     },
     "productionBranch": {
-      "$ref": "#/$defs/ProductionBranch"
-    },
-    "tags": {
-      "type": "object",
-      "description": "The tag for the Amplify app.",
-      "additionalProperties": {
-        "type": "string"
-      }
-    }
-  },
-  "$defs": {
-    "CustomRule": {
-      "type": "object",
-      "required": ["source", "target"],
-      "properties": {
-        "source": {
-          "type": "string",
-          "description": "The source pattern for a URL rewrite or redirect rule.",
-          "minLength": 1,
-          "maxLength": 2048
-        },
-        "target": {
-          "type": "string",
-          "description": "The target pattern for a URL rewrite or redirect rule.",
-          "minLength": 1,
-          "maxLength": 2048
-        },
-        "status": {
-          "type": "string",
-          "description": "The status code for a URL rewrite or redirect rule.",
-          "pattern": "^[0-9]{3}$"
-        },
-        "condition": {
-          "type": "string",
-          "description": "The condition for a URL rewrite or redirect rule."
-        }
-      }
-    },
-    "ProductionBranch": {
-      "type": "object",
-      "properties": {
-        "lastDeployTime": {
-          "type": "string",
-          "format": "date-time",
-          "description": "The last deploy time of the production branch."
-        },
-        "status": {
-          "type": "string",
-          "description": "The status of the production branch."
-        },
-        "thumbnailUrl": {
-          "type": "string",
-          "description": "The thumbnail URL for the production branch."
-        },
-        "branchName": {
-          "type": "string",
-          "description": "The branch name for the production branch."
-        }
-      }
+      "$ref": "#/definitions/ProductionBranch"
     }
   }
 }

@@ -1,0 +1,12 @@
+{
+  "appId": "example-appId",
+  "appArn": "example-appArn",
+  "name": "example-name",
+  "description": "example-description",
+  "repository": "example-repository",
+  "platform": "WEB",
+  "createTime": "2024-01-15T10:30:00Z",
+  "updateTime": "2024-01-15T10:30:00Z",
+  "defaultDomain": "example-defaultDomain",
+  "productionBranch": "example-productionBranch"
+}

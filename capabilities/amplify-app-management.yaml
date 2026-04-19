@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Amplify App Management
+  description: Workflow capability for managing full-stack Amplify applications including app creation, branch management, and deployment workflows.
+  tags:
+  - Amazon
+  - Amplify
+  - AWS
+  - Deployment
+  - Frontend
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - import: amazon-amplify
+    location: ./shared/amazon-amplify.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amplify-management-api
+    description: REST API for Amplify app management.
+    resources:
+    - path: /v1/apps
+      name: apps
+      description: Amplify application management.
+      operations:
+      - method: GET
+        name: list-apps
+        description: List all Amplify apps.
+        call: amazon-amplify.list-apps
+        with: {}
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amplify-management-mcp
+    transport: http
+    description: MCP server for AI-assisted Amplify app management.
+    tools:
+    - name: list-amplify-apps
+      description: List all Amazon Amplify applications in the AWS account.
+      hints:
+        readOnly: true
+        openWorld: false
+      call: amazon-amplify.list-apps
+      with: {}
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-amplify-app
+      description: Create a new Amplify full-stack application connected to a code repository.
+      hints:
+        readOnly: false
+        openWorld: false
+      call: amazon-amplify.create-app
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

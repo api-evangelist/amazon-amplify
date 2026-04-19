@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ListAppsResult",
+  "type": "record",
+  "fields": [
+    {
+      "name": "apps",
+      "type": "array"
+    },
+    {
+      "name": "nextToken",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ListAppsResult",
+  "type": "object",
+  "properties": {
+    "apps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/App"
+      }
+    },
+    "nextToken": {
+      "type": "string"
+    }
+  }
+}

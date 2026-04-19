@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "Branch",
+  "type": "record",
+  "fields": [
+    {
+      "name": "branchName",
+      "type": "string"
+    },
+    {
+      "name": "branchArn",
+      "type": "string"
+    },
+    {
+      "name": "description",
+      "type": "string"
+    },
+    {
+      "name": "stage",
+      "type": "string"
+    },
+    {
+      "name": "displayName",
+      "type": "string"
+    },
+    {
+      "name": "activeJobId",
+      "type": "string"
+    }
+  ]
+}

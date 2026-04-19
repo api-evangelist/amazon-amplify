@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Branch",
+  "type": "object",
+  "properties": {
+    "branchName": {
+      "type": "string"
+    },
+    "branchArn": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "PRODUCTION",
+        "BETA",
+        "DEVELOPMENT",
+        "EXPERIMENTAL",
+        "PULL_REQUEST"
+      ]
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "activeJobId": {
+      "type": "string"
+    }
+  }
+}

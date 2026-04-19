@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "ProductionBranch",
+  "type": "record",
+  "fields": [
+    {
+      "name": "branchName",
+      "type": "string"
+    },
+    {
+      "name": "lastDeployTime",
+      "type": "datetime"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    }
+  ]
+}
