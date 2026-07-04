@@ -1,0 +1,24 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Amazon Amplify REST API
+  version: 1.0.0
+extends: openapi/amazon-amplify-openapi.yaml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: amazon-amplify
+      x-apievangelist-index: >-
+        https://raw.githubusercontent.com/api-evangelist/amazon-amplify/refs/heads/main/apis.yml
+      x-apievangelist-artifacts:
+        packages: packages/amazon-amplify-packages.yml
+        llms: llms/amazon-amplify-llms.txt
+        errors: errors/amazon-amplify-problem-types.yml
+        conformance: conformance/amazon-amplify-conformance.yml
+        lifecycle: lifecycle/amazon-amplify-lifecycle.yml
+  - target: $.info
+    update:
+      x-apievangelist-authentication: AWS Signature Version 4 (SigV4)
+  - target: $.externalDocs
+    update:
+      x-apievangelist-llms-txt: https://docs.aws.amazon.com/amplify/latest/APIReference/llms.txt
+      x-apievangelist-common-errors: https://docs.aws.amazon.com/amplify/latest/APIReference/CommonErrors.html

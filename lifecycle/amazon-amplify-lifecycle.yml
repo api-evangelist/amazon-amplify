@@ -1,0 +1,25 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  AWS Amplify API reference, AWS SDK/service versioning conventions, AWS Health
+  status dashboard, AWS Amplify SLA
+versioning:
+  scheme: service-api-version
+  current: '2017-07-25'
+  note: >-
+    The Amplify management API is versioned by AWS API version date
+    (2017-07-25). SDK clients pin this version automatically.
+  docs: https://docs.aws.amazon.com/amplify/latest/APIReference/Welcome.html
+deprecation:
+  policy_url: https://docs.aws.amazon.com/amplify/latest/userguide/
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    AWS communicates deprecations via service announcements and documentation
+    rather than RFC 8594 Sunset/Deprecation headers. Amplify Gen 1 constructs
+    (e.g. BackendEnvironment) are documented as Gen 1 only.
+sla:
+  url: https://aws.amazon.com/amplify/sla/
+  uptime_target: "99.9%"
+status_page: https://health.aws.amazon.com/health/status
+deprecated_operations: []

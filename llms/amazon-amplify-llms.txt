@@ -1,0 +1,71 @@
+# Amplify Welcome
+
+> Welcome to the AWS Amplify Hosting API documentation. This reference provides descriptions of the actions and data types for the Amplify Hosting API. If you are looking for the API documentation for the Amplify iOS, Amplify Android, and Amplify client libraries, see the open-source documentation for the Amplify Framework.
+
+- [Welcome](https://docs.aws.amazon.com/amplify/latest/APIReference/Welcome.md)
+- [Common Parameters](https://docs.aws.amazon.com/amplify/latest/APIReference/CommonParameters.md)
+- [Common Error Types](https://docs.aws.amazon.com/amplify/latest/APIReference/CommonErrors.md)
+
+## [Actions](https://docs.aws.amazon.com/amplify/latest/APIReference/API_Operations.md)
+
+- [CreateApp](https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateApp.md): Creates a new Amplify app.
+- [CreateBackendEnvironment](https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateBackendEnvironment.md): Creates a new backend environment for an Amplify app.
+- [CreateBranch](https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateBranch.md): Creates a new branch for an Amplify app.
+- [CreateDeployment](https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateDeployment.md): Creates a deployment for a manually deployed Amplify app.
+- [CreateDomainAssociation](https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateDomainAssociation.md): Creates a new domain association for an Amplify app.
+- [CreateWebhook](https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateWebhook.md): Creates a new webhook on an Amplify app.
+- [DeleteApp](https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteApp.md): Deletes an existing Amplify app specified by an app ID.
+- [DeleteBackendEnvironment](https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteBackendEnvironment.md): Deletes a backend environment for an Amplify app.
+- [DeleteBranch](https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteBranch.md): Deletes a branch for an Amplify app.
+- [DeleteDomainAssociation](https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteDomainAssociation.md): Deletes a domain association for an Amplify app.
+- [DeleteJob](https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteJob.md): Deletes a job for a branch of an Amplify app.
+- [DeleteWebhook](https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteWebhook.md): Deletes a webhook.
+- [GenerateAccessLogs](https://docs.aws.amazon.com/amplify/latest/APIReference/API_GenerateAccessLogs.md): Returns the website access logs for a specific time range using a presigned URL.
+- [GetApp](https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetApp.md): Returns an existing Amplify app specified by an app ID.
+- [GetArtifactUrl](https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetArtifactUrl.md): Returns the artifact info that corresponds to an artifact id.
+- [GetBackendEnvironment](https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetBackendEnvironment.md): Returns a backend environment for an Amplify app.
+- [GetBranch](https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetBranch.md): Returns a branch for an Amplify app.
+- [GetDomainAssociation](https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetDomainAssociation.md): Returns the domain information for an Amplify app.
+- [GetJob](https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetJob.md): Returns a job for a branch of an Amplify app.
+- [GetWebhook](https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetWebhook.md): Returns the webhook information that corresponds to a specified webhook ID.
+- [ListApps](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListApps.md): Returns a list of the existing Amplify apps.
+- [ListArtifacts](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListArtifacts.md): Returns a list of end-to-end testing artifacts for a specified app, branch, and job.
+- [ListBackendEnvironments](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListBackendEnvironments.md): Lists the backend environments for an Amplify app.
+- [ListBranches](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListBranches.md): Lists the branches of an Amplify app.
+- [ListDomainAssociations](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListDomainAssociations.md): Returns the domain associations for an Amplify app.
+- [ListJobs](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListJobs.md): Lists the jobs for a branch of an Amplify app.
+- [ListTagsForResource](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListTagsForResource.md): Returns a list of tags for a specified Amazon Resource Name (ARN).
+- [ListWebhooks](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListWebhooks.md): Returns a list of webhooks for an Amplify app.
+- [StartDeployment](https://docs.aws.amazon.com/amplify/latest/APIReference/API_StartDeployment.md): Starts a deployment for a manually deployed app.
+- [StartJob](https://docs.aws.amazon.com/amplify/latest/APIReference/API_StartJob.md): Starts a new job for a branch of an Amplify app.
+- [StopJob](https://docs.aws.amazon.com/amplify/latest/APIReference/API_StopJob.md): Stops a job that is in progress for a branch of an Amplify app.
+- [TagResource](https://docs.aws.amazon.com/amplify/latest/APIReference/API_TagResource.md): Tags the resource with a tag key and value.
+- [UntagResource](https://docs.aws.amazon.com/amplify/latest/APIReference/API_UntagResource.md): Untags a resource with a specified Amazon Resource Name (ARN).
+- [UpdateApp](https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateApp.md): Updates an existing Amplify app.
+- [UpdateBranch](https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateBranch.md): Updates a branch for an Amplify app.
+- [UpdateDomainAssociation](https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateDomainAssociation.md): Creates a new domain association for an Amplify app.
+- [UpdateWebhook](https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateWebhook.md): Updates a webhook.
+
+
+## [Data Types](https://docs.aws.amazon.com/amplify/latest/APIReference/API_Types.md)
+
+- [App](https://docs.aws.amazon.com/amplify/latest/APIReference/API_App.md): Represents the different branches of a repository for building, deploying, and hosting an Amplify app.
+- [Artifact](https://docs.aws.amazon.com/amplify/latest/APIReference/API_Artifact.md): Describes an artifact.
+- [AutoBranchCreationConfig](https://docs.aws.amazon.com/amplify/latest/APIReference/API_AutoBranchCreationConfig.md): Describes the automated branch creation configuration.
+- [Backend](https://docs.aws.amazon.com/amplify/latest/APIReference/API_Backend.md): Describes the backend associated with an Amplify Branch.
+- [BackendEnvironment](https://docs.aws.amazon.com/amplify/latest/APIReference/API_BackendEnvironment.md): Describes the backend environment associated with a Branch of a Gen 1 Amplify app.
+- [Branch](https://docs.aws.amazon.com/amplify/latest/APIReference/API_Branch.md): The branch for an Amplify app, which maps to a third-party repository branch.
+- [CacheConfig](https://docs.aws.amazon.com/amplify/latest/APIReference/API_CacheConfig.md): Describes the cache configuration for an Amplify app.
+- [Certificate](https://docs.aws.amazon.com/amplify/latest/APIReference/API_Certificate.md): Describes the current SSL/TLS certificate that is in use for the domain.
+- [CertificateSettings](https://docs.aws.amazon.com/amplify/latest/APIReference/API_CertificateSettings.md): The type of SSL/TLS certificate to use for your custom domain.
+- [CustomRule](https://docs.aws.amazon.com/amplify/latest/APIReference/API_CustomRule.md): Describes a custom rewrite or redirect rule.
+- [DomainAssociation](https://docs.aws.amazon.com/amplify/latest/APIReference/API_DomainAssociation.md): Describes the association between a custom domain and an Amplify app.
+- [Job](https://docs.aws.amazon.com/amplify/latest/APIReference/API_Job.md): Describes an execution job for an Amplify app.
+- [JobConfig](https://docs.aws.amazon.com/amplify/latest/APIReference/API_JobConfig.md): Describes the configuration details that apply to the jobs for an Amplify app.
+- [JobSummary](https://docs.aws.amazon.com/amplify/latest/APIReference/API_JobSummary.md): Describes the summary for an execution job for an Amplify app.
+- [ProductionBranch](https://docs.aws.amazon.com/amplify/latest/APIReference/API_ProductionBranch.md): Describes the information about a production branch for an Amplify app.
+- [Step](https://docs.aws.amazon.com/amplify/latest/APIReference/API_Step.md): Describes an execution step, for an execution job, for an Amplify app.
+- [SubDomain](https://docs.aws.amazon.com/amplify/latest/APIReference/API_SubDomain.md): The subdomain for the domain association.
+- [SubDomainSetting](https://docs.aws.amazon.com/amplify/latest/APIReference/API_SubDomainSetting.md): Describes the settings for the subdomain.
+- [WafConfiguration](https://docs.aws.amazon.com/amplify/latest/APIReference/API_WafConfiguration.md): Describes the Firewall configuration for a hosted Amplify application.
+- [Webhook](https://docs.aws.amazon.com/amplify/latest/APIReference/API_Webhook.md): Describes a webhook that connects repository events to an Amplify app.

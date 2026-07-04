@@ -1,0 +1,37 @@
+generated: '2026-06-20'
+method: derived
+source: >-
+  openapi/amazon-amplify-openapi.yaml security schemes, parameters, responses;
+  AWS Amplify API reference
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: API uses AWS Signature Version 4 (sigv4), not OAuth2
+  - id: oidc
+    conforms: false
+  - id: aws-sigv4
+    conforms: true
+    evidence: openapi security requirement `sigv4`; SigV4 request signing
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: errors returned as AWS JSON error shape, not application/problem+json
+  - id: cursor-pagination
+    conforms: true
+    evidence: list operations accept maxResults + nextToken query parameters
+  - id: idempotency-keys
+    conforms: false
+    evidence: no Idempotency-Key header defined in the OpenAPI
+  - id: json-api
+    conforms: false
+  - id: fhir-r4
+    conforms: false
+  - id: scim2
+    conforms: false
+  - id: odata
+    conforms: false
+  - id: rfc9116-security-txt
+    conforms: true
+    evidence: https://aws.amazon.com/.well-known/security.txt returns 200
+  - id: llms-txt
+    conforms: true
+    evidence: https://docs.aws.amazon.com/amplify/latest/APIReference/llms.txt returns 200

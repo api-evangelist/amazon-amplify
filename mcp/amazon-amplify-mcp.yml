@@ -1,0 +1,51 @@
+generated: '2026-06-20'
+method: derived
+status: candidate
+source: openapi/amazon-amplify-openapi.yaml operations
+description: >-
+  No single hosted MCP server dedicated to the Amplify Hosting management REST
+  API was found. AWS publishes related MCP servers (see related_servers). The
+  tools below are a candidate mapping, one per OpenAPI operationId, that a
+  server could expose over the Amplify management API.
+server:
+  name: amazon-amplify
+  transport: stdio
+related_servers:
+  - name: awslabs.frontend-mcp-server
+    registry: pypi
+    url: https://pypi.org/project/awslabs.frontend-mcp-server/
+    note: AWS Labs MCP server for frontend/Amplify React development guidance
+  - name: awslabs/mcp
+    url: https://github.com/awslabs/mcp
+    note: Official AWS open-source MCP servers monorepo
+  - name: AWS MCP Server for Amplify (Gen 2)
+    url: https://docs.amplify.aws/react/develop-with-ai/mcp-server/
+    note: Documented Amplify Gen 2 development MCP server
+tools:
+  - name: list_apps
+    description: Returns a list of the existing Amplify apps.
+    source_operation: openapi/amazon-amplify-openapi.yaml#listApps
+  - name: create_app
+    description: Creates a new Amplify app.
+    source_operation: openapi/amazon-amplify-openapi.yaml#createApp
+  - name: get_app
+    description: Returns an existing Amplify app specified by an app ID.
+    source_operation: openapi/amazon-amplify-openapi.yaml#getApp
+  - name: update_app
+    description: Updates an existing Amplify app.
+    source_operation: openapi/amazon-amplify-openapi.yaml#updateApp
+  - name: delete_app
+    description: Deletes an existing Amplify app specified by an app ID.
+    source_operation: openapi/amazon-amplify-openapi.yaml#deleteApp
+  - name: list_branches
+    description: Lists the branches of an Amplify app.
+    source_operation: openapi/amazon-amplify-openapi.yaml#listBranches
+  - name: create_branch
+    description: Creates a new branch for an Amplify app.
+    source_operation: openapi/amazon-amplify-openapi.yaml#createBranch
+  - name: list_domain_associations
+    description: Returns the domain associations for an Amplify app.
+    source_operation: openapi/amazon-amplify-openapi.yaml#listDomainAssociations
+  - name: create_domain_association
+    description: Creates a new domain association for an Amplify app.
+    source_operation: openapi/amazon-amplify-openapi.yaml#createDomainAssociation

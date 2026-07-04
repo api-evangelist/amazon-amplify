@@ -1,0 +1,66 @@
+generated: '2026-06-20'
+method: searched
+source: >-
+  npm, PyPI, RubyGems, Maven Central, NuGet, pkg.go.dev, Packagist registries
+  probed for first-party AWS Amplify / AWS SDK Amplify clients
+packages:
+  - language: javascript
+    registry: npm
+    name: aws-amplify
+    url: https://www.npmjs.com/package/aws-amplify
+    install: npm install aws-amplify
+    official: true
+    note: First-party Amplify client library (Auth, Data, Storage, etc.)
+  - language: javascript
+    registry: npm
+    name: "@aws-amplify/cli"
+    url: https://www.npmjs.com/package/@aws-amplify/cli
+    install: npm install -g @aws-amplify/cli
+    official: true
+    note: Amplify Gen 1 CLI
+  - language: javascript
+    registry: npm
+    name: "@aws-sdk/client-amplify"
+    url: https://www.npmjs.com/package/@aws-sdk/client-amplify
+    install: npm install @aws-sdk/client-amplify
+    official: true
+    note: AWS SDK for JavaScript v3 client for the Amplify Hosting management API
+  - language: python
+    registry: pypi
+    name: boto3
+    url: https://pypi.org/project/boto3/
+    install: pip install boto3
+    official: true
+    note: AWS SDK for Python; exposes the Amplify management client via boto3.client('amplify')
+  - language: ruby
+    registry: rubygems
+    name: aws-sdk-amplify
+    url: https://rubygems.org/gems/aws-sdk-amplify
+    install: gem install aws-sdk-amplify
+    official: true
+    note: Official AWS Ruby gem for AWS Amplify
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/aws/aws-sdk-go-v2/service/amplify
+    url: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/amplify
+    install: go get github.com/aws/aws-sdk-go-v2/service/amplify
+    official: true
+  - language: java
+    registry: maven
+    name: software.amazon.awssdk:amplify
+    url: https://central.sonatype.com/artifact/software.amazon.awssdk/amplify
+    install: "implementation 'software.amazon.awssdk:amplify'"
+    official: true
+  - language: csharp
+    registry: nuget
+    name: AWSSDK.Amplify
+    url: https://www.nuget.org/packages/AWSSDK.Amplify
+    install: dotnet add package AWSSDK.Amplify
+    official: true
+  - language: php
+    registry: packagist
+    name: aws/aws-sdk-php
+    url: https://packagist.org/packages/aws/aws-sdk-php
+    install: composer require aws/aws-sdk-php
+    official: true
+    note: AWS SDK for PHP; includes the Amplify management client
