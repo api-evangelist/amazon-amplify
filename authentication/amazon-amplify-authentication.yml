@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/amazon-amplify-api-openapi.yml, openapi/amazon-amplify-openapi.yaml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: sigv4
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: AWS Signature Version 4
+  sources:
+  - openapi/amazon-amplify-api-openapi.yml
+  - openapi/amazon-amplify-openapi.yaml

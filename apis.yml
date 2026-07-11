@@ -70,6 +70,14 @@ apis:
   - type: ErrorCatalog
     url: errors/amazon-amplify-problem-types.yml
 common:
+- type: TrustCenter
+  url: security/amazon-amplify-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-amplify-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-amplify-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-amplify-authentication.yml
 - type: Packages
   url: packages/amazon-amplify-packages.yml
 - type: WellKnown
