@@ -70,6 +70,8 @@ apis:
   - type: ErrorCatalog
     url: errors/amazon-amplify-problem-types.yml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-amplify-agentic-access.yml
 - type: TrustCenter
   url: security/amazon-amplify-trust-center.yml
 - type: VulnerabilityDisclosure
