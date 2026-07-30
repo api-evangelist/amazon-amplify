@@ -3,28 +3,37 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-amplify/refs/heads/main/apis.yml
 name: Amazon Amplify
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-amplify.png
 specificationVersion: '0.19'
 description: AWS Amplify is a set of tools and services for building secure, scalable full-stack applications powered by AWS. It provides frontend and mobile developers with a complete workflow for 
   building, deploying, and hosting cloud-powered applications.
 created: '2024-01-15'
 modified: '2026-06-20'
 apis:
-- name: Amazon Amplify REST API
-  description: RESTful API for AWS Amplify enabling management of apps, branches, domain associations, backend environments, and deployments for full-stack web and mobile applications.
-  image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+- aid: amazon-amplify:amazon-amplify-apps-api
+  name: Amazon Amplify Apps API
+  description: The Apps API from Amazon Amplify — 4 operation(s) for apps.
   humanURL: https://aws.amazon.com/amplify/
   baseURL: https://amplify.amazonaws.com
   tags:
-  - AWS
-  - Frontend
-  - Full Stack
-  - Mobile Development
+  - Apps
   properties:
+  - type: OpenAPI
+    url: openapi/amazon-amplify-apps-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/amplify/latest/APIReference/
-  - type: OpenAPI
-    url: openapi/amazon-amplify-openapi.yaml
   - type: JSONSchema
     url: json-schema/amazon-amplify-app-schema.json
   - type: JSONLD
@@ -48,8 +57,6 @@ apis:
   - type: Status
     url: https://status.aws.amazon.com/
   - type: JSONSchema
-    url: json-schema/amazon-amplify-app-schema.json
-  - type: JSONSchema
     url: json-schema/amazon-amplify-branch-schema.json
   - type: JSONSchema
     url: json-schema/amazon-amplify-createapprequest-schema.json
@@ -63,10 +70,6 @@ apis:
     url: json-structure/amazon-amplify-branch-structure.json
   - type: JSONStructure
     url: json-structure/amazon-amplify-createapprequest-structure.json
-  - type: JSONLD
-    url: json-ld/amazon-amplify-context.jsonld
-  - type: Overlay
-    url: overlays/amazon-amplify-api-overlay.yaml
   - type: ErrorCatalog
     url: errors/amazon-amplify-problem-types.yml
 common:
