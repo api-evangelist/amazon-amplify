@@ -1,0 +1,350 @@
+openapi: 3.1.0
+info:
+  title: Amazon Amplify REST API
+  description: >-
+    AWS Amplify is a set of tools and services for building secure, scalable
+    full-stack applications. This API enables management of Amplify apps,
+    branches, domain associations, backend environments, webhooks, and
+    deployments.
+  version: '2017-07-25'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+externalDocs:
+  description: Amazon Amplify API Reference
+  url: https://docs.aws.amazon.com/amplify/latest/APIReference/Welcome.html
+servers:
+- url: https://amplify.{region}.amazonaws.com
+  description: Amazon Amplify regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+security:
+- sigv4: []
+paths:
+  /apps:
+    get:
+      summary: Amazon Amplify List Apps
+      description: Returns a list of the existing Amplify apps.
+      operationId: listApps
+      parameters:
+      - name: maxResults
+        in: query
+        schema:
+          type: integer
+      - name: nextToken
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListAppsResult'
+      tags:
+      - Apps
+    post:
+      summary: Amazon Amplify Create App
+      description: Creates a new Amplify app.
+      operationId: createApp
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateAppRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateAppResult'
+      tags:
+      - Apps
+  /apps/{appId}:
+    get:
+      summary: Amazon Amplify Get App
+      description: Returns an existing Amplify app specified by an app ID.
+      operationId: getApp
+      parameters:
+      - name: appId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAppResult'
+      tags:
+      - Apps
+    post:
+      summary: Amazon Amplify Update App
+      description: Updates an existing Amplify app.
+      operationId: updateApp
+      parameters:
+      - name: appId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateAppRequest'
+      responses:
+        '200':
+          description: Successful response
+      tags:
+      - Apps
+    delete:
+      summary: Amazon Amplify Delete App
+      description: Deletes an existing Amplify app specified by an app ID.
+      operationId: deleteApp
+      parameters:
+      - name: appId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      tags:
+      - Apps
+  /apps/{appId}/branches:
+    get:
+      summary: Amazon Amplify List Branches
+      description: Lists the branches of an Amplify app.
+      operationId: listBranches
+      parameters:
+      - name: appId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      tags:
+      - Apps
+    post:
+      summary: Amazon Amplify Create Branch
+      description: Creates a new branch for an Amplify app.
+      operationId: createBranch
+      parameters:
+      - name: appId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateBranchRequest'
+      responses:
+        '200':
+          description: Successful response
+      tags:
+      - Apps
+  /apps/{appId}/domains:
+    get:
+      summary: Amazon Amplify List Domain Associations
+      description: Returns the domain associations for an Amplify app.
+      operationId: listDomainAssociations
+      parameters:
+      - name: appId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      tags:
+      - Apps
+    post:
+      summary: Amazon Amplify Create Domain Association
+      description: Creates a new domain association for an Amplify app.
+      operationId: createDomainAssociation
+      parameters:
+      - name: appId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateDomainAssociationRequest'
+      responses:
+        '200':
+          description: Successful response
+      tags:
+      - Apps
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+  schemas:
+    App:
+      type: object
+      properties:
+        appId:
+          type: string
+          description: The unique ID of the Amplify app.
+        appArn:
+          type: string
+          description: The Amazon Resource Name (ARN) of the Amplify app.
+        name:
+          type: string
+          description: The name of the Amplify app.
+        description:
+          type: string
+          description: The description of the Amplify app.
+        repository:
+          type: string
+          description: The Git repository for the Amplify app.
+        platform:
+          type: string
+          enum: [WEB, WEB_DYNAMIC, WEB_COMPUTE]
+        createTime:
+          type: string
+          format: date-time
+        updateTime:
+          type: string
+          format: date-time
+        defaultDomain:
+          type: string
+        productionBranch:
+          $ref: '#/components/schemas/ProductionBranch'
+    ProductionBranch:
+      type: object
+      properties:
+        branchName:
+          type: string
+        lastDeployTime:
+          type: string
+          format: date-time
+        status:
+          type: string
+    Branch:
+      type: object
+      properties:
+        branchName:
+          type: string
+        branchArn:
+          type: string
+        description:
+          type: string
+        stage:
+          type: string
+          enum: [PRODUCTION, BETA, DEVELOPMENT, EXPERIMENTAL, PULL_REQUEST]
+        displayName:
+          type: string
+        activeJobId:
+          type: string
+    CreateAppRequest:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        repository:
+          type: string
+        platform:
+          type: string
+        oauthToken:
+          type: string
+    CreateAppResult:
+      type: object
+      properties:
+        app:
+          $ref: '#/components/schemas/App'
+    GetAppResult:
+      type: object
+      properties:
+        app:
+          $ref: '#/components/schemas/App'
+    ListAppsResult:
+      type: object
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/App'
+        nextToken:
+          type: string
+    UpdateAppRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+    CreateBranchRequest:
+      type: object
+      required:
+      - branchName
+      properties:
+        branchName:
+          type: string
+        description:
+          type: string
+        stage:
+          type: string
+    CreateDomainAssociationRequest:
+      type: object
+      required:
+      - domainName
+      - subDomainSettings
+      properties:
+        domainName:
+          type: string
+        subDomainSettings:
+          type: array
+          items:
+            type: object
+            properties:
+              prefix:
+                type: string
+              branchName:
+                type: string
+tags:
+- name: Apps

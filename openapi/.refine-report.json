@@ -1,0 +1,14 @@
+{
+  "provider": "amazon-amplify",
+  "sources": [
+    "amazon-amplify-apps-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-amplify-apps-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
