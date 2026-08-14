@@ -1,6 +1,5 @@
 aid: amazon-amplify
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/amazon-amplify/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/amazon-amplify/refs/heads/main/apis.yml
 name: Amazon Amplify
 type: Index
 accessModel:
@@ -12,171 +11,183 @@ accessModel:
   label: Self-serve signup
   confidence: medium
   source:
-  - authentication
+    - authentication
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-amplify.png
 specificationVersion: '0.19'
-description: AWS Amplify is a set of tools and services for building secure, scalable full-stack applications powered by AWS. It provides frontend and mobile developers with a complete workflow for 
-  building, deploying, and hosting cloud-powered applications.
+description: >-
+  AWS Amplify is a set of tools and services for building secure, scalable full-stack applications powered by AWS. It
+  provides frontend and mobile developers with a complete workflow for building, deploying, and hosting cloud-powered
+  applications.
 created: '2024-01-15'
 modified: '2026-06-20'
 apis:
-- aid: amazon-amplify:amazon-amplify-apps-api
-  name: Amazon Amplify Apps API
-  description: The Apps API from Amazon Amplify — 4 operation(s) for apps.
-  humanURL: https://aws.amazon.com/amplify/
-  baseURL: https://amplify.amazonaws.com
-  tags:
-  - Apps
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-amplify-apps-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/amplify/latest/APIReference/
-  - type: JSONSchema
-    url: json-schema/amazon-amplify-app-schema.json
-  - type: JSONLD
-    url: json-ld/amazon-amplify-context.jsonld
-  - type: Pricing
-    url: https://aws.amazon.com/amplify/pricing/
-  - type: Getting Started
-    url: https://aws.amazon.com/amplify/getting-started/
-  - type: Authentication
-    url: https://docs.aws.amazon.com/amplify/latest/APIReference/Welcome.html
-  - type: SDKs
-    url: https://aws.amazon.com/tools/
-  - type: FAQ
-    url: https://aws.amazon.com/amplify/faqs/
-  - type: User Guide
-    url: https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html
-  - type: API Reference
-    url: https://docs.aws.amazon.com/amplify/latest/APIReference/Welcome.html
-  - type: Service Level Agreement
-    url: https://aws.amazon.com/amplify/sla/
-  - type: Status
-    url: https://status.aws.amazon.com/
-  - type: JSONSchema
-    url: json-schema/amazon-amplify-branch-schema.json
-  - type: JSONSchema
-    url: json-schema/amazon-amplify-createapprequest-schema.json
-  - type: JSONSchema
-    url: json-schema/amazon-amplify-createappresult-schema.json
-  - type: JSONSchema
-    url: json-schema/amazon-amplify-createbranchrequest-schema.json
-  - type: JSONStructure
-    url: json-structure/amazon-amplify-app-structure.json
-  - type: JSONStructure
-    url: json-structure/amazon-amplify-branch-structure.json
-  - type: JSONStructure
-    url: json-structure/amazon-amplify-createapprequest-structure.json
-  - type: ErrorCatalog
-    url: errors/amazon-amplify-problem-types.yml
+  - aid: amazon-amplify:amazon-amplify-apps-api
+    name: Amazon Amplify Apps API
+    description: The Apps API from Amazon Amplify — 4 operation(s) for apps.
+    humanURL: https://aws.amazon.com/amplify/
+    baseURL: https://amplify.amazonaws.com
+    tags:
+      - Apps
+    properties:
+      - type: OpenAPI
+        url: openapi/amazon-amplify-apps-api-openapi.yml
+      - type: Documentation
+        url: https://docs.aws.amazon.com/amplify/latest/APIReference/
+      - type: JSONSchema
+        url: json-schema/amazon-amplify-app-schema.json
+      - type: JSONLD
+        url: json-ld/amazon-amplify-context.jsonld
+      - type: Pricing
+        url: https://aws.amazon.com/amplify/pricing/
+      - type: Getting Started
+        url: https://aws.amazon.com/amplify/getting-started/
+      - type: Authentication
+        url: https://docs.aws.amazon.com/amplify/latest/APIReference/Welcome.html
+      - type: SDKs
+        url: https://aws.amazon.com/tools/
+      - type: FAQ
+        url: https://aws.amazon.com/amplify/faqs/
+      - type: User Guide
+        url: https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html
+      - type: API Reference
+        url: https://docs.aws.amazon.com/amplify/latest/APIReference/Welcome.html
+      - type: Service Level Agreement
+        url: https://aws.amazon.com/amplify/sla/
+      - type: Status
+        url: https://status.aws.amazon.com/
+      - type: JSONSchema
+        url: json-schema/amazon-amplify-branch-schema.json
+      - type: JSONSchema
+        url: json-schema/amazon-amplify-createapprequest-schema.json
+      - type: JSONSchema
+        url: json-schema/amazon-amplify-createappresult-schema.json
+      - type: JSONSchema
+        url: json-schema/amazon-amplify-createbranchrequest-schema.json
+      - type: JSONStructure
+        url: json-structure/amazon-amplify-app-structure.json
+      - type: JSONStructure
+        url: json-structure/amazon-amplify-branch-structure.json
+      - type: JSONStructure
+        url: json-structure/amazon-amplify-createapprequest-structure.json
+      - type: ErrorCatalog
+        url: errors/amazon-amplify-problem-types.yml
 common:
-- type: Overlay
-  url: overlays/amazon-amplify-api-overlay.yaml
-- type: AgenticAccess
-  url: agentic-access/amazon-amplify-agentic-access.yml
-- type: TrustCenter
-  url: security/amazon-amplify-trust-center.yml
-- type: VulnerabilityDisclosure
-  url: security/amazon-amplify-vulnerability-disclosure.yml
-- type: DomainSecurity
-  url: security/amazon-amplify-domain-security.yml
-- type: Authentication
-  url: authentication/amazon-amplify-authentication.yml
-- type: Packages
-  url: packages/amazon-amplify-packages.yml
-- type: WellKnown
-  url: well-known/amazon-amplify-well-known.yml
-- type: SecurityTxt
-  url: well-known/amazon-amplify-security.txt
-- type: MCPServer
-  url: mcp/amazon-amplify-mcp.yml
-- type: LLMsTxt
-  url: llms/amazon-amplify-llms.txt
-- type: Conformance
-  url: conformance/amazon-amplify-conformance.yml
-- type: Lifecycle
-  url: lifecycle/amazon-amplify-lifecycle.yml
-- type: Portal
-  url: https://aws.amazon.com/
-- type: Website
-  url: https://aws.amazon.com/amplify/
-- type: Documentation
-  url: https://docs.aws.amazon.com/amplify/
-- type: TermsOfService
-  url: https://aws.amazon.com/service-terms/
-- type: PrivacyPolicy
-  url: https://aws.amazon.com/privacy/
-- type: Support
-  url: https://aws.amazon.com/premiumsupport/
-- type: Blog
-  url: https://aws.amazon.com/blogs/mobile/
-- type: GitHubOrganization
-  url: https://github.com/aws-amplify
-- type: Console
-  url: https://console.aws.amazon.com/amplify/
-- type: SignUp
-  url: https://signin.aws.amazon.com/signup?request_type=register
-- type: Login
-  url: https://aws.amazon.com/console/
-- type: Status
-  url: https://health.aws.amazon.com/health/status
-- type: KnowledgeCenter
-  url: https://repost.aws/knowledge-center
-- type: YouTube
-  url: https://www.youtube.com/user/AmazonWebServices
-- type: StackOverflow
-  url: https://stackoverflow.com/questions/tagged/aws-amplify
-- type: Contact
-  url: https://aws.amazon.com/contact-us/
-- type: SpectralRules
-  url: rules/amazon-amplify-spectral-rules.yml
-- type: NaftikoCapability
-  url: capabilities/amplify-app-management.yaml
-- type: Vocabulary
-  url: vocabulary/amazon-amplify-vocabulary.yaml
-- type: Features
-  data:
-  - name: App Management
-    description: Create, update, and delete Amplify apps connected to Git repositories with automated build and deployment settings.
-  - name: Branch Management
-    description: Manage feature branches and environments with independent build configurations, environment variables, and preview URLs.
-  - name: Deployment Automation
-    description: Trigger and monitor deployments across branches with build history, logs, and status tracking.
-  - name: Domain Association
-    description: Associate custom domains with Amplify apps and manage SSL certificates and subdomain routing configurations.
-  - name: Backend Environment Management
-    description: Manage AWS backend environments linked to Amplify applications for full-stack cloud resource provisioning.
-- type: UseCases
-  data:
-  - name: CI/CD Pipeline Automation
-    description: Automate build and deployment workflows for frontend apps by programmatically managing Amplify apps and branch deployments.
-  - name: Multi-Environment Management
-    description: Manage development, staging, and production environments as separate branches with independent configurations.
-  - name: Infrastructure as Code
-    description: Provision and configure Amplify hosting environments as part of infrastructure-as-code pipelines using the REST API.
-  - name: Developer Portal Integration
-    description: Integrate Amplify app management into internal developer portals for self-service application deployment and hosting.
-- type: Integrations
-  data:
-  - name: AWS CodeCommit
-    description: Connect Amplify apps to AWS CodeCommit repositories for source code hosting and automated deployments.
-  - name: GitHub
-    description: Link Amplify deployments to GitHub repositories with automatic builds triggered on pull requests and branch merges.
-  - name: AWS CloudFront
-    description: Amplify hosting uses CloudFront for global CDN distribution of static assets and dynamic content.
-  - name: AWS Route 53
-    description: Configure custom domains for Amplify apps using Route 53 DNS management and SSL certificate provisioning.
+  - type: Overlay
+    url: overlays/amazon-amplify-api-overlay.yaml
+  - type: AgenticAccess
+    url: agentic-access/amazon-amplify-agentic-access.yml
+  - type: TrustCenter
+    url: security/amazon-amplify-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-amplify-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-amplify-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-amplify-authentication.yml
+  - type: Packages
+    url: packages/amazon-amplify-packages.yml
+  - type: WellKnown
+    url: well-known/amazon-amplify-well-known.yml
+  - type: SecurityTxt
+    url: well-known/amazon-amplify-security.txt
+  - type: MCPServer
+    url: mcp/amazon-amplify-mcp.yml
+  - type: LLMsTxt
+    url: llms/amazon-amplify-llms.txt
+  - type: Conformance
+    url: conformance/amazon-amplify-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-amplify-lifecycle.yml
+  - type: Portal
+    url: https://aws.amazon.com/
+  - type: Website
+    url: https://aws.amazon.com/amplify/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amplify/
+  - type: TermsOfService
+    url: https://aws.amazon.com/service-terms/
+  - type: PrivacyPolicy
+    url: https://aws.amazon.com/privacy/
+  - type: Support
+    url: https://aws.amazon.com/premiumsupport/
+  - type: Blog
+    url: https://aws.amazon.com/blogs/mobile/
+  - type: GitHubOrganization
+    url: https://github.com/aws-amplify
+  - type: Console
+    url: https://console.aws.amazon.com/amplify/
+  - type: SignUp
+    url: https://signin.aws.amazon.com/signup?request_type=register
+  - type: Login
+    url: https://aws.amazon.com/console/
+  - type: Status
+    url: https://health.aws.amazon.com/health/status
+  - type: KnowledgeCenter
+    url: https://repost.aws/knowledge-center
+  - type: YouTube
+    url: https://www.youtube.com/user/AmazonWebServices
+  - type: StackOverflow
+    url: https://stackoverflow.com/questions/tagged/aws-amplify
+  - type: Contact
+    url: https://aws.amazon.com/contact-us/
+  - type: SpectralRules
+    url: rules/amazon-amplify-spectral-rules.yml
+  - type: Vocabulary
+    url: vocabulary/amazon-amplify-vocabulary.yaml
+  - type: Features
+    data:
+      - name: App Management
+        description: >-
+          Create, update, and delete Amplify apps connected to Git repositories with automated build and deployment
+          settings.
+      - name: Branch Management
+        description: >-
+          Manage feature branches and environments with independent build configurations, environment variables, and
+          preview URLs.
+      - name: Deployment Automation
+        description: Trigger and monitor deployments across branches with build history, logs, and status tracking.
+      - name: Domain Association
+        description: Associate custom domains with Amplify apps and manage SSL certificates and subdomain routing configurations.
+      - name: Backend Environment Management
+        description: Manage AWS backend environments linked to Amplify applications for full-stack cloud resource provisioning.
+  - type: UseCases
+    data:
+      - name: CI/CD Pipeline Automation
+        description: >-
+          Automate build and deployment workflows for frontend apps by programmatically managing Amplify apps and branch
+          deployments.
+      - name: Multi-Environment Management
+        description: Manage development, staging, and production environments as separate branches with independent configurations.
+      - name: Infrastructure as Code
+        description: >-
+          Provision and configure Amplify hosting environments as part of infrastructure-as-code pipelines using the
+          REST API.
+      - name: Developer Portal Integration
+        description: >-
+          Integrate Amplify app management into internal developer portals for self-service application deployment and
+          hosting.
+  - type: Integrations
+    data:
+      - name: AWS CodeCommit
+        description: Connect Amplify apps to AWS CodeCommit repositories for source code hosting and automated deployments.
+      - name: GitHub
+        description: >-
+          Link Amplify deployments to GitHub repositories with automatic builds triggered on pull requests and branch
+          merges.
+      - name: AWS CloudFront
+        description: Amplify hosting uses CloudFront for global CDN distribution of static assets and dynamic content.
+      - name: AWS Route 53
+        description: Configure custom domains for Amplify apps using Route 53 DNS management and SSL certificate provisioning.
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-  url: https://apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    url: https://apievangelist.com
 tags:
-- AWS
-- Frontend
-- Full Stack
-- Hosting
-- Mobile Development
-- Web Applications
+  - AWS
+  - Frontend
+  - Full Stack
+  - Hosting
+  - Mobile Development
+  - Web Applications
