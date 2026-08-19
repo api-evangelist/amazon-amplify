@@ -1,0 +1,202 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Amplify REST Apps API",
+    "version": "2017-07-25"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Apps",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Amplify List Apps",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://amplify.{region}.amazonaws.com/apps",
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of the existing Amplify apps."
+        },
+        {
+          "info": {
+            "name": "Amazon Amplify Create App",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://amplify.{region}.amazonaws.com/apps",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new Amplify app."
+        },
+        {
+          "info": {
+            "name": "Amazon Amplify Get App",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://amplify.{region}.amazonaws.com/apps/:appId",
+            "params": [
+              {
+                "name": "appId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns an existing Amplify app specified by an app ID."
+        },
+        {
+          "info": {
+            "name": "Amazon Amplify Update App",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://amplify.{region}.amazonaws.com/apps/:appId",
+            "params": [
+              {
+                "name": "appId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an existing Amplify app."
+        },
+        {
+          "info": {
+            "name": "Amazon Amplify Delete App",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://amplify.{region}.amazonaws.com/apps/:appId",
+            "params": [
+              {
+                "name": "appId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes an existing Amplify app specified by an app ID."
+        },
+        {
+          "info": {
+            "name": "Amazon Amplify List Branches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://amplify.{region}.amazonaws.com/apps/:appId/branches",
+            "params": [
+              {
+                "name": "appId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the branches of an Amplify app."
+        },
+        {
+          "info": {
+            "name": "Amazon Amplify Create Branch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://amplify.{region}.amazonaws.com/apps/:appId/branches",
+            "params": [
+              {
+                "name": "appId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new branch for an Amplify app."
+        },
+        {
+          "info": {
+            "name": "Amazon Amplify List Domain Associations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://amplify.{region}.amazonaws.com/apps/:appId/domains",
+            "params": [
+              {
+                "name": "appId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns the domain associations for an Amplify app."
+        },
+        {
+          "info": {
+            "name": "Amazon Amplify Create Domain Association",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://amplify.{region}.amazonaws.com/apps/:appId/domains",
+            "params": [
+              {
+                "name": "appId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new domain association for an Amplify app."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
