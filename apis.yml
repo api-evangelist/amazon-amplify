@@ -29,6 +29,8 @@ apis:
     humanURL: https://aws.amazon.com/amplify/
     baseURL: https://amplify.amazonaws.com
     tags:
+      - Application
+    tags_raw:
       - Apps
     properties:
       - type: OpenAPI
@@ -185,6 +187,13 @@ maintainers:
     email: kin@apievangelist.com
     url: https://apievangelist.com
 tags:
+  - AWS
+  - Frontend
+  - Full-Stack
+  - Hosting
+  - Mobile Development
+  - Web Applications
+tags_raw:
   - AWS
   - Frontend
   - Full Stack
