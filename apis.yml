@@ -214,5 +214,5 @@ tags_raw:
   - Hosting
   - Mobile Development
   - Web Applications
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
