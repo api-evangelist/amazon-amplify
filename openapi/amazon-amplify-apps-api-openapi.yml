@@ -209,18 +209,6 @@ paths:
       - Apps
 components:
   schemas:
-    CreateAppResult:
-      type: object
-      properties:
-        app:
-          $ref: '#/components/schemas/App'
-    UpdateAppRequest:
-      type: object
-      properties:
-        name:
-          type: string
-        description:
-          type: string
     CreateAppRequest:
       type: object
       required:
@@ -236,15 +224,38 @@ components:
           type: string
         oauthToken:
           type: string
-    ProductionBranch:
+    CreateDomainAssociationRequest:
       type: object
+      required:
+      - domainName
+      - subDomainSettings
+      properties:
+        domainName:
+          type: string
+        subDomainSettings:
+          type: array
+          items:
+            type: object
+            properties:
+              prefix:
+                type: string
+              branchName:
+                type: string
+    GetAppResult:
+      type: object
+      properties:
+        app:
+          $ref: '#/components/schemas/App'
+    CreateBranchRequest:
+      type: object
+      required:
+      - branchName
       properties:
         branchName:
           type: string
-        lastDeployTime:
+        description:
           type: string
-          format: date-time
-        status:
+        stage:
           type: string
     App:
       type: object
@@ -280,6 +291,13 @@ components:
           type: string
         productionBranch:
           $ref: '#/components/schemas/ProductionBranch'
+    UpdateAppRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
     ListAppsResult:
       type: object
       properties:
@@ -289,39 +307,21 @@ components:
             $ref: '#/components/schemas/App'
         nextToken:
           type: string
-    CreateBranchRequest:
-      type: object
-      required:
-      - branchName
-      properties:
-        branchName:
-          type: string
-        description:
-          type: string
-        stage:
-          type: string
-    CreateDomainAssociationRequest:
-      type: object
-      required:
-      - domainName
-      - subDomainSettings
-      properties:
-        domainName:
-          type: string
-        subDomainSettings:
-          type: array
-          items:
-            type: object
-            properties:
-              prefix:
-                type: string
-              branchName:
-                type: string
-    GetAppResult:
+    CreateAppResult:
       type: object
       properties:
         app:
           $ref: '#/components/schemas/App'
+    ProductionBranch:
+      type: object
+      properties:
+        branchName:
+          type: string
+        lastDeployTime:
+          type: string
+          format: date-time
+        status:
+          type: string
   securitySchemes:
     sigv4:
       type: apiKey
