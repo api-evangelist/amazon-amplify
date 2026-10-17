@@ -209,11 +209,48 @@ paths:
       - Apps
 components:
   schemas:
-    CreateAppResult:
+    ListAppsResult:
+      type: object
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/App'
+        nextToken:
+          type: string
+    UpdateAppRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+    GetAppResult:
       type: object
       properties:
         app:
           $ref: '#/components/schemas/App'
+    CreateBranchRequest:
+      type: object
+      required:
+      - branchName
+      properties:
+        branchName:
+          type: string
+        description:
+          type: string
+        stage:
+          type: string
+    ProductionBranch:
+      type: object
+      properties:
+        branchName:
+          type: string
+        lastDeployTime:
+          type: string
+          format: date-time
+        status:
+          type: string
     CreateDomainAssociationRequest:
       type: object
       required:
@@ -231,6 +268,11 @@ components:
                 type: string
               branchName:
                 type: string
+    CreateAppResult:
+      type: object
+      properties:
+        app:
+          $ref: '#/components/schemas/App'
     App:
       type: object
       properties:
@@ -265,41 +307,6 @@ components:
           type: string
         productionBranch:
           $ref: '#/components/schemas/ProductionBranch'
-    ProductionBranch:
-      type: object
-      properties:
-        branchName:
-          type: string
-        lastDeployTime:
-          type: string
-          format: date-time
-        status:
-          type: string
-    CreateBranchRequest:
-      type: object
-      required:
-      - branchName
-      properties:
-        branchName:
-          type: string
-        description:
-          type: string
-        stage:
-          type: string
-    GetAppResult:
-      type: object
-      properties:
-        app:
-          $ref: '#/components/schemas/App'
-    ListAppsResult:
-      type: object
-      properties:
-        apps:
-          type: array
-          items:
-            $ref: '#/components/schemas/App'
-        nextToken:
-          type: string
     CreateAppRequest:
       type: object
       required:
@@ -314,13 +321,6 @@ components:
         platform:
           type: string
         oauthToken:
-          type: string
-    UpdateAppRequest:
-      type: object
-      properties:
-        name:
-          type: string
-        description:
           type: string
   securitySchemes:
     sigv4:
