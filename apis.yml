@@ -89,6 +89,8 @@ apis:
       - type: ErrorCatalog
         url: errors/amazon-amplify-problem-types.yml
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-amplify/overview
   - type: Overlay
     url: overlays/amazon-amplify-api-overlay.yaml
   - type: AgenticAccess
