@@ -1,70 +1,731 @@
 {
+  "info": {
+    "_postman_id": "2815737f-42a4-4961-b35a-4e38422dc258",
+    "name": "Amazon Amplify REST Apps API",
+    "description": "AWS Amplify is a set of tools and services for building secure, scalable full-stack applications. This API enables management of Amplify apps, branches, domain associations, backend environments, webhooks, and deployments.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T03:17:18.000Z",
+    "updatedAt": "2026-10-22T03:17:19.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-2815737f-42a4-4961-b35a-4e38422dc258"
+  },
   "item": [
     {
-      "id": "83a440a2-79e6-4c58-9912-dd93e3bc66a0",
-      "name": "Apps",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "apps",
       "item": [
         {
-          "id": "1b872c58-5f1f-44ae-b722-0c519f88d030",
-          "name": "Amazon Amplify List Apps",
-          "request": {
-            "name": "Amazon Amplify List Apps",
-            "description": {
-              "content": "Returns a list of the existing Amplify apps.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "apps"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
+          "name": "{appId}",
+          "item": [
+            {
+              "name": "branches",
+              "item": [
                 {
-                  "disabled": false,
-                  "key": "maxResults",
-                  "value": "<integer>"
+                  "name": "Amazon Amplify List Branches",
+                  "id": "69858cf3-6cef-4a2f-9524-593dcecae81e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/apps/:appId/branches",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "apps",
+                        ":appId",
+                        "branches"
+                      ],
+                      "variable": [
+                        {
+                          "id": "417ccd96-43f8-4132-85cd-829e82f727ae",
+                          "key": "appId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Lists the branches of an Amplify app."
+                  },
+                  "response": [
+                    {
+                      "id": "48ef1935-7143-4bcd-8de0-614065d66924",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/apps/:appId/branches",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "apps",
+                            ":appId",
+                            "branches"
+                          ],
+                          "variable": [
+                            {
+                              "key": "appId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-10-22T03:17:19.000Z",
+                      "updatedAt": "2026-10-22T03:17:19.000Z",
+                      "uid": "35240-48ef1935-7143-4bcd-8de0-614065d66924"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T03:17:19.000Z",
+                  "updatedAt": "2026-10-22T03:17:19.000Z",
+                  "uid": "35240-69858cf3-6cef-4a2f-9524-593dcecae81e"
                 },
                 {
-                  "disabled": false,
-                  "key": "nextToken",
-                  "value": "<string>"
+                  "name": "Amazon Amplify Create Branch",
+                  "id": "f90e7f76-1cb9-4490-b1a8-d0abf83c6cf1",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"branchName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"stage\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/apps/:appId/branches",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "apps",
+                        ":appId",
+                        "branches"
+                      ],
+                      "variable": [
+                        {
+                          "id": "d7dd8a15-02ea-4000-9f6a-97231cc63923",
+                          "key": "appId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Creates a new branch for an Amplify app."
+                  },
+                  "response": [
+                    {
+                      "id": "29b6c77c-3439-45a0-928d-2c4cfe7949a1",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"branchName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"stage\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/apps/:appId/branches",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "apps",
+                            ":appId",
+                            "branches"
+                          ],
+                          "variable": [
+                            {
+                              "key": "appId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-10-22T03:17:19.000Z",
+                      "updatedAt": "2026-10-22T03:17:19.000Z",
+                      "uid": "35240-29b6c77c-3439-45a0-928d-2c4cfe7949a1"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T03:17:19.000Z",
+                  "updatedAt": "2026-10-22T03:17:19.000Z",
+                  "uid": "35240-f90e7f76-1cb9-4490-b1a8-d0abf83c6cf1"
                 }
               ],
-              "variable": [
-                {
-                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
+              "id": "2dea8948-3d79-4733-9da2-70eff06028d3",
+              "createdAt": "2026-10-22T03:17:19.000Z",
+              "updatedAt": "2026-10-22T03:17:19.000Z",
+              "uid": "35240-2dea8948-3d79-4733-9da2-70eff06028d3"
             },
+            {
+              "name": "domains",
+              "item": [
+                {
+                  "name": "Amazon Amplify List Domain Associations",
+                  "id": "413d8ff5-0608-45ca-9acc-7496e416c58d",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/apps/:appId/domains",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "apps",
+                        ":appId",
+                        "domains"
+                      ],
+                      "variable": [
+                        {
+                          "id": "d5a850d9-661e-4345-bf5c-35c8c7db9b3c",
+                          "key": "appId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Returns the domain associations for an Amplify app."
+                  },
+                  "response": [
+                    {
+                      "id": "0c13ec30-9559-466d-852d-db147eb4b2e1",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/apps/:appId/domains",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "apps",
+                            ":appId",
+                            "domains"
+                          ],
+                          "variable": [
+                            {
+                              "key": "appId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-10-22T03:17:19.000Z",
+                      "updatedAt": "2026-10-22T03:17:19.000Z",
+                      "uid": "35240-0c13ec30-9559-466d-852d-db147eb4b2e1"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T03:17:19.000Z",
+                  "updatedAt": "2026-10-22T03:17:19.000Z",
+                  "uid": "35240-413d8ff5-0608-45ca-9acc-7496e416c58d"
+                },
+                {
+                  "name": "Amazon Amplify Create Domain Association",
+                  "id": "8bf8ff9b-b9de-406e-b101-c7cb207a9992",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"domainName\": \"<string>\",\n  \"subDomainSettings\": [\n    {\n      \"prefix\": \"<string>\",\n      \"branchName\": \"<string>\"\n    },\n    {\n      \"prefix\": \"<string>\",\n      \"branchName\": \"<string>\"\n    }\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/apps/:appId/domains",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "apps",
+                        ":appId",
+                        "domains"
+                      ],
+                      "variable": [
+                        {
+                          "id": "73c19e2c-12c6-48ad-9de3-b29b34bc6999",
+                          "key": "appId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Creates a new domain association for an Amplify app."
+                  },
+                  "response": [
+                    {
+                      "id": "19005136-5eab-4696-8ac0-8856503f0fbf",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"domainName\": \"<string>\",\n  \"subDomainSettings\": [\n    {\n      \"prefix\": \"<string>\",\n      \"branchName\": \"<string>\"\n    },\n    {\n      \"prefix\": \"<string>\",\n      \"branchName\": \"<string>\"\n    }\n  ]\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/apps/:appId/domains",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "apps",
+                            ":appId",
+                            "domains"
+                          ],
+                          "variable": [
+                            {
+                              "key": "appId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-10-22T03:17:19.000Z",
+                      "updatedAt": "2026-10-22T03:17:19.000Z",
+                      "uid": "35240-19005136-5eab-4696-8ac0-8856503f0fbf"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T03:17:19.000Z",
+                  "updatedAt": "2026-10-22T03:17:19.000Z",
+                  "uid": "35240-8bf8ff9b-b9de-406e-b101-c7cb207a9992"
+                }
+              ],
+              "id": "67fe9c9b-6110-453f-8957-d22b99a1e04d",
+              "createdAt": "2026-10-22T03:17:19.000Z",
+              "updatedAt": "2026-10-22T03:17:19.000Z",
+              "uid": "35240-67fe9c9b-6110-453f-8957-d22b99a1e04d"
+            },
+            {
+              "name": "Amazon Amplify Get App",
+              "id": "28f80600-bd82-4c92-a192-987282e522bd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/apps/:appId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "apps",
+                    ":appId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "7ed0871e-5b08-4808-937d-22a4e85f2b0a",
+                      "key": "appId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Returns an existing Amplify app specified by an app ID."
+              },
+              "response": [
+                {
+                  "id": "f92bdb60-2220-443d-bbbc-001d5f1be651",
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/apps/:appId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "apps",
+                        ":appId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "appId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"app\": {\n    \"appId\": \"<string>\",\n    \"appArn\": \"<string>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"repository\": \"<string>\",\n    \"platform\": \"WEB\",\n    \"createTime\": \"<dateTime>\",\n    \"updateTime\": \"<dateTime>\",\n    \"defaultDomain\": \"<string>\",\n    \"productionBranch\": {\n      \"branchName\": \"<string>\",\n      \"lastDeployTime\": \"<dateTime>\",\n      \"status\": \"<string>\"\n    }\n  }\n}",
+                  "createdAt": "2026-10-22T03:17:19.000Z",
+                  "updatedAt": "2026-10-22T03:17:19.000Z",
+                  "uid": "35240-f92bdb60-2220-443d-bbbc-001d5f1be651"
+                }
+              ],
+              "createdAt": "2026-10-22T03:17:19.000Z",
+              "updatedAt": "2026-10-22T03:17:19.000Z",
+              "uid": "35240-28f80600-bd82-4c92-a192-987282e522bd"
+            },
+            {
+              "name": "Amazon Amplify Update App",
+              "id": "84dc7ee1-2f25-40b6-9b35-f2b44b47afc5",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/apps/:appId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "apps",
+                    ":appId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d2d3c32f-fb3c-4e07-9db7-6da52cbd05ab",
+                      "key": "appId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Updates an existing Amplify app."
+              },
+              "response": [
+                {
+                  "id": "2870f059-23ac-4b78-9d1c-ef8d70521350",
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/apps/:appId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "apps",
+                        ":appId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "appId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T03:17:19.000Z",
+                  "updatedAt": "2026-10-22T03:17:19.000Z",
+                  "uid": "35240-2870f059-23ac-4b78-9d1c-ef8d70521350"
+                }
+              ],
+              "createdAt": "2026-10-22T03:17:19.000Z",
+              "updatedAt": "2026-10-22T03:17:19.000Z",
+              "uid": "35240-84dc7ee1-2f25-40b6-9b35-f2b44b47afc5"
+            },
+            {
+              "name": "Amazon Amplify Delete App",
+              "id": "f874187e-dc80-40dd-b052-f2d0ce942472",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/apps/:appId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "apps",
+                    ":appId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "1620908b-a555-4ca5-99b3-a7ec02ae6501",
+                      "key": "appId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Deletes an existing Amplify app specified by an app ID."
+              },
+              "response": [
+                {
+                  "id": "0afb43ed-e0ec-4678-aced-4373104097e3",
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/apps/:appId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "apps",
+                        ":appId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "appId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-22T03:17:19.000Z",
+                  "updatedAt": "2026-10-22T03:17:19.000Z",
+                  "uid": "35240-0afb43ed-e0ec-4678-aced-4373104097e3"
+                }
+              ],
+              "createdAt": "2026-10-22T03:17:19.000Z",
+              "updatedAt": "2026-10-22T03:17:19.000Z",
+              "uid": "35240-f874187e-dc80-40dd-b052-f2d0ce942472"
+            }
+          ],
+          "id": "861d6718-5e74-4261-ab63-5216159dd8db",
+          "createdAt": "2026-10-22T03:17:19.000Z",
+          "updatedAt": "2026-10-22T03:17:19.000Z",
+          "uid": "35240-861d6718-5e74-4261-ab63-5216159dd8db"
+        },
+        {
+          "name": "Amazon Amplify List Apps",
+          "id": "b377eec8-f75f-4e1c-8165-083a1daf4d57",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
             "header": [
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "method": "GET",
-            "auth": null
+            "url": {
+              "raw": "{{baseUrl}}/apps?maxResults=<integer>&nextToken=<string>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "apps"
+              ],
+              "query": [
+                {
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ]
+            },
+            "description": "Returns a list of the existing Amplify apps."
           },
           "response": [
             {
-              "id": "f7c0118c-c545-4648-866e-25f2c45d4835",
+              "id": "d1bf41a6-c089-416e-b1cb-036349ee2508",
               "name": "Successful response",
               "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
                 "url": {
-                  "path": [
-                    "apps"
-                  ],
+                  "raw": "{{baseUrl}}/apps?maxResults=<integer>&nextToken=<string>",
                   "host": [
                     "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "apps"
                   ],
                   "query": [
                     {
@@ -75,77 +736,38 @@
                       "key": "nextToken",
                       "value": "<string>"
                     }
-                  ],
-                  "variable": [
-                    {
-                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
                   ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
+                }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"apps\": [\n    {\n      \"appId\": \"string\",\n      \"appArn\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"repository\": \"string\",\n      \"platform\": \"WEB\",\n      \"createTime\": \"1961-04-27T05:17:38.248Z\",\n      \"updateTime\": \"1997-01-23T01:28:23.721Z\",\n      \"defaultDomain\": \"string\",\n      \"productionBranch\": {\n        \"branchName\": \"string\",\n        \"lastDeployTime\": \"1977-01-08T06:06:45.385Z\",\n        \"status\": \"string\"\n      }\n    },\n    {\n      \"appId\": \"string\",\n      \"appArn\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"repository\": \"string\",\n      \"platform\": \"WEB\",\n      \"createTime\": \"2026-07-18T09:22:47.462Z\",\n      \"updateTime\": \"1948-09-06T19:30:44.626Z\",\n      \"defaultDomain\": \"string\",\n      \"productionBranch\": {\n        \"branchName\": \"string\",\n        \"lastDeployTime\": \"1975-08-28T16:44:04.005Z\",\n        \"status\": \"string\"\n      }\n    }\n  ],\n  \"nextToken\": \"string\"\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"apps\": [\n    {\n      \"appId\": \"<string>\",\n      \"appArn\": \"<string>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"repository\": \"<string>\",\n      \"platform\": \"WEB_COMPUTE\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"defaultDomain\": \"<string>\",\n      \"productionBranch\": {\n        \"branchName\": \"<string>\",\n        \"lastDeployTime\": \"<dateTime>\",\n        \"status\": \"<string>\"\n      }\n    },\n    {\n      \"appId\": \"<string>\",\n      \"appArn\": \"<string>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"repository\": \"<string>\",\n      \"platform\": \"WEB_DYNAMIC\",\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"defaultDomain\": \"<string>\",\n      \"productionBranch\": {\n        \"branchName\": \"<string>\",\n        \"lastDeployTime\": \"<dateTime>\",\n        \"status\": \"<string>\"\n      }\n    }\n  ],\n  \"nextToken\": \"<string>\"\n}",
+              "createdAt": "2026-10-22T03:17:19.000Z",
+              "updatedAt": "2026-10-22T03:17:19.000Z",
+              "uid": "35240-d1bf41a6-c089-416e-b1cb-036349ee2508"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T03:17:19.000Z",
+          "updatedAt": "2026-10-22T03:17:19.000Z",
+          "uid": "35240-b377eec8-f75f-4e1c-8165-083a1daf4d57"
         },
         {
-          "id": "f8da2ccd-1df4-4a50-9ffb-0765b66cf89d",
           "name": "Amazon Amplify Create App",
+          "id": "f0414000-3dc1-464c-89aa-16e39f9b8a51",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "name": "Amazon Amplify Create App",
-            "description": {
-              "content": "Creates a new Amplify app.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "apps"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
@@ -156,875 +778,94 @@
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
               "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"repository\": \"<string>\",\n  \"platform\": \"<string>\",\n  \"oauthToken\": \"<string>\"\n}",
               "options": {
                 "raw": {
+                  "headerFamily": "json",
                   "language": "json"
                 }
               }
-            }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/apps",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "apps"
+              ]
+            },
+            "description": "Creates a new Amplify app."
           },
           "response": [
             {
-              "id": "6063b99f-faf3-490e-b545-fc13a9407b28",
+              "id": "c5be2733-d031-45eb-9346-605be0d47c8a",
               "name": "Successful response",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "apps"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
+                "method": "POST",
                 "header": [
                   {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
+                    "key": "Content-Type",
+                    "value": "application/json"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"repository\": \"<string>\",\n  \"platform\": \"<string>\",\n  \"oauthToken\": \"<string>\"\n}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/apps",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "apps"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"app\": {\n    \"appId\": \"string\",\n    \"appArn\": \"string\",\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"repository\": \"string\",\n    \"platform\": \"WEB_DYNAMIC\",\n    \"createTime\": \"1997-12-17T23:10:13.128Z\",\n    \"updateTime\": \"2005-09-19T08:49:28.385Z\",\n    \"defaultDomain\": \"string\",\n    \"productionBranch\": {\n      \"branchName\": \"string\",\n      \"lastDeployTime\": \"1963-09-27T17:28:54.328Z\",\n      \"status\": \"string\"\n    }\n  }\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"app\": {\n    \"appId\": \"<string>\",\n    \"appArn\": \"<string>\",\n    \"name\": \"<string>\",\n    \"description\": \"<string>\",\n    \"repository\": \"<string>\",\n    \"platform\": \"WEB\",\n    \"createTime\": \"<dateTime>\",\n    \"updateTime\": \"<dateTime>\",\n    \"defaultDomain\": \"<string>\",\n    \"productionBranch\": {\n      \"branchName\": \"<string>\",\n      \"lastDeployTime\": \"<dateTime>\",\n      \"status\": \"<string>\"\n    }\n  }\n}",
+              "createdAt": "2026-10-22T03:17:19.000Z",
+              "updatedAt": "2026-10-22T03:17:19.000Z",
+              "uid": "35240-c5be2733-d031-45eb-9346-605be0d47c8a"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "f32d52ec-0f91-488b-a529-496eb26d2fa1",
-          "name": "Amazon Amplify Get App",
-          "request": {
-            "name": "Amazon Amplify Get App",
-            "description": {
-              "content": "Returns an existing Amplify app specified by an app ID.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "apps",
-                ":appId"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "appId",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "ca1cd0fb-04cc-47a7-b0fe-fbfd2eddddc0",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "apps",
-                    ":appId"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "appId",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"app\": {\n    \"appId\": \"string\",\n    \"appArn\": \"string\",\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"repository\": \"string\",\n    \"platform\": \"WEB_DYNAMIC\",\n    \"createTime\": \"1997-12-17T23:10:13.128Z\",\n    \"updateTime\": \"2005-09-19T08:49:28.385Z\",\n    \"defaultDomain\": \"string\",\n    \"productionBranch\": {\n      \"branchName\": \"string\",\n      \"lastDeployTime\": \"1963-09-27T17:28:54.328Z\",\n      \"status\": \"string\"\n    }\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "3b2ed895-6e1c-4af0-bc5a-6650a31a65c0",
-          "name": "Amazon Amplify Update App",
-          "request": {
-            "name": "Amazon Amplify Update App",
-            "description": {
-              "content": "Updates an existing Amplify app.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "apps",
-                ":appId"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "appId",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "9e17b899-a62f-4b22-b29f-0cee4f6f6ff8",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "apps",
-                    ":appId"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "appId",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "d35da7b3-058e-48ce-99fe-c0e9661fc49c",
-          "name": "Amazon Amplify Delete App",
-          "request": {
-            "name": "Amazon Amplify Delete App",
-            "description": {
-              "content": "Deletes an existing Amplify app specified by an app ID.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "apps",
-                ":appId"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "appId",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
-            "method": "DELETE",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "c6a9e31f-706a-423a-8e32-033fc55ed061",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "apps",
-                    ":appId"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "appId",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "266fec25-6b6a-4624-9205-70269922e3d7",
-          "name": "Amazon Amplify List Branches",
-          "request": {
-            "name": "Amazon Amplify List Branches",
-            "description": {
-              "content": "Lists the branches of an Amplify app.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "apps",
-                ":appId",
-                "branches"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "appId",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "8fe9cc05-216b-4be0-841e-d0a0531c0f60",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "apps",
-                    ":appId",
-                    "branches"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "appId",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "c6567ba6-3c43-47f4-ac6e-0d9b8ab47f86",
-          "name": "Amazon Amplify Create Branch",
-          "request": {
-            "name": "Amazon Amplify Create Branch",
-            "description": {
-              "content": "Creates a new branch for an Amplify app.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "apps",
-                ":appId",
-                "branches"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "appId",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"branchName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"stage\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "bde8ce04-d1fd-48a5-aa5e-a21bf2c483e2",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "apps",
-                    ":appId",
-                    "branches"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "appId",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"branchName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"stage\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "1172e22e-28a9-40c8-a861-20d868659d39",
-          "name": "Amazon Amplify List Domain Associations",
-          "request": {
-            "name": "Amazon Amplify List Domain Associations",
-            "description": {
-              "content": "Returns the domain associations for an Amplify app.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "apps",
-                ":appId",
-                "domains"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "appId",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "4e5dbf26-e5d3-4f09-bfc5-2e8b0fbe1657",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "apps",
-                    ":appId",
-                    "domains"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "appId",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "12df2382-e7e8-4da3-a959-f9991fef5634",
-          "name": "Amazon Amplify Create Domain Association",
-          "request": {
-            "name": "Amazon Amplify Create Domain Association",
-            "description": {
-              "content": "Creates a new domain association for an Amplify app.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "apps",
-                ":appId",
-                "domains"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "appId",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"domainName\": \"<string>\",\n  \"subDomainSettings\": [\n    {\n      \"prefix\": \"<string>\",\n      \"branchName\": \"<string>\"\n    },\n    {\n      \"prefix\": \"<string>\",\n      \"branchName\": \"<string>\"\n    }\n  ]\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "1e529626-b3a0-4247-aa00-17e9b6c701c6",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "apps",
-                    ":appId",
-                    "domains"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "appId",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<API Key>"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"domainName\": \"<string>\",\n  \"subDomainSettings\": [\n    {\n      \"prefix\": \"<string>\",\n      \"branchName\": \"<string>\"\n    },\n    {\n      \"prefix\": \"<string>\",\n      \"branchName\": \"<string>\"\n    }\n  ]\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-22T03:17:19.000Z",
+          "updatedAt": "2026-10-22T03:17:19.000Z",
+          "uid": "35240-f0414000-3dc1-464c-89aa-16e39f9b8a51"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1)",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "us-east-1",
-      "key": "region"
-    },
-    {
-      "type": "string",
-      "value": "https://amplify.{{region}}.amazonaws.com",
-      "key": "baseUrl"
+      "id": "c01a84d6-0a20-4dff-98c3-9fa8246fdda4",
+      "createdAt": "2026-10-22T03:17:19.000Z",
+      "updatedAt": "2026-10-22T03:17:19.000Z",
+      "uid": "35240-c01a84d6-0a20-4dff-98c3-9fa8246fdda4"
     }
   ],
   "auth": {
@@ -1032,25 +873,29 @@
     "apikey": [
       {
         "key": "key",
-        "value": "Authorization"
+        "value": "Authorization",
+        "type": "string"
       },
       {
         "key": "value",
-        "value": "{{apiKey}}"
+        "value": "{{apiKey}}",
+        "type": "string"
       },
       {
         "key": "in",
-        "value": "header"
+        "value": "header",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "a1093970-f943-4bfa-8b7c-b4ccd35d8c69",
-    "name": "Amazon Amplify REST Apps API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "AWS Amplify is a set of tools and services for building secure, scalable full-stack applications. This API enables management of Amplify apps, branches, domain associations, backend environments, webhooks, and deployments.\n\nContact Support:\n Name: AWS Support",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://amplify.{{region}}.amazonaws.com"
     }
-  }
+  ]
 }
