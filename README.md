@@ -1,4 +1,4 @@
-# Amazon Amplify (amazon-amplify)
+# Amazon Amplify
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,144 +66,188 @@
 
 AWS Amplify is a set of tools and services for building secure, scalable full-stack applications powered by AWS. It provides frontend and mobile developers with a complete workflow for building, deploying, and hosting cloud-powered applications.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-amplify/refs/heads/main/apis.yml)
+**Areas:** AWS · Frontend · Full-Stack · Hosting · Mobile Development · Web Applications
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon Amplify on APIs.io
 
-## Tags:
+Everything profiled for Amazon Amplify is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-amplify/](https://apis.io/providers/amazon-amplify/)** — or go straight to one of the APIs or properties below.
 
- - AWS, Frontend, Full Stack, Hosting, Mobile Development, Web Applications
+### APIs (8)
 
-## Timestamps
+- [Amazon Amplify Apps API](https://apis.io/apis/amazon-amplify/amazon-amplify-apps-api/) — The Apps API from Amazon Amplify — 4 operation(s) for apps.
+- [Amazon Amplify Amplify Backendenvironments API](https://apis.io/apis/amazon-amplify/amazon-amplify-backendenvironments-api/) — The Amplify Backendenvironments API from Amazon Amplify — 2 operation(s) for amplify backendenvironments.
+- [Amazon Amplify Amplify Branches API](https://apis.io/apis/amazon-amplify/amazon-amplify-branches-api/) — The Amplify Branches API from Amazon Amplify — 2 operation(s) for amplify branches.
+- [Amazon Amplify Amplify Domains API](https://apis.io/apis/amazon-amplify/amazon-amplify-domains-api/) — The Amplify Domains API from Amazon Amplify — 2 operation(s) for amplify domains.
+- [Amazon Amplify Amplify Jobs API](https://apis.io/apis/amazon-amplify/amazon-amplify-jobs-api/) — The Amplify Jobs API from Amazon Amplify — 2 operation(s) for amplify jobs.
+- [Amazon Amplify Amplify Operations API](https://apis.io/apis/amazon-amplify/amazon-amplify-operations-api/) — The Amplify Operations API from Amazon Amplify — 6 operation(s) for amplify operations.
+- [Amazon Amplify Amplify Tags API](https://apis.io/apis/amazon-amplify/amazon-amplify-tags-api/) — The Amplify Tags API from Amazon Amplify — 1 operation(s) for amplify tags.
+- [Amazon Amplify Amplify Webhooks API](https://apis.io/apis/amazon-amplify/amazon-amplify-webhooks-api/) — The Amplify Webhooks API from Amazon Amplify — 2 operation(s) for amplify webhooks.
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon Amplify REST API
-RESTful API for AWS Amplify enabling management of apps, branches, domain associations, backend environments, and deployments for full-stack web and mobile applications.
+#### MCP servers (1)
 
-**Human URL:** [https://aws.amazon.com/amplify/](https://aws.amazon.com/amplify/)
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags:
+- [amazon-amplify](https://apis.io/servers/amazon-amplify/amazon-amplify/)
 
- - AWS, Frontend, Full Stack, Mobile Development
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://docs.aws.amazon.com/amplify/latest/APIReference/)
-- [OpenAPI](openapi/amazon-amplify-openapi.yaml)
-- [JSONSchema](json-schema/amazon-amplify-app-schema.json)
-- [JSONLD](json-ld/amazon-amplify-context.jsonld)
-- [Pricing](https://aws.amazon.com/amplify/pricing/)
-- [Getting Started](https://aws.amazon.com/amplify/getting-started/)
-- [Authentication](https://docs.aws.amazon.com/amplify/latest/APIReference/Welcome.html)
-- [SDKs](https://aws.amazon.com/tools/)
-- [FAQ](https://aws.amazon.com/amplify/faqs/)
-- [User Guide](https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html)
-- [API Reference](https://docs.aws.amazon.com/amplify/latest/APIReference/Welcome.html)
-- [Service Level Agreement](https://aws.amazon.com/amplify/sla/)
-- [Status](https://status.aws.amazon.com/)
-- [JSONSchema](json-schema/amazon-amplify-app-schema.json)
-- [JSONSchema](json-schema/amazon-amplify-branch-schema.json)
-- [JSONSchema](json-schema/amazon-amplify-createapprequest-schema.json)
-- [JSONSchema](json-schema/amazon-amplify-createappresult-schema.json)
-- [JSONSchema](json-schema/amazon-amplify-createbranchrequest-schema.json)
-- [JSONStructure](json-structure/amazon-amplify-app-structure.json)
-- [JSONStructure](json-structure/amazon-amplify-branch-structure.json)
-- [JSONStructure](json-structure/amazon-amplify-createapprequest-structure.json)
-- [JSONLD](json-ld/amazon-amplify-context.jsonld)
+- [Amazon Amplify Agentic Access](https://apis.io/agentic-access/amazon-amplify/amazon-amplify-agentic-access/)
 
-## Common Properties
+#### JSON Schema (10)
 
-- [Portal](https://aws.amazon.com/)
+The data models the API reads and writes.
+
+- [App](https://apis.io/schemas/amazon-amplify/amazon-amplify-app/)
+- [Branch](https://apis.io/schemas/amazon-amplify/amazon-amplify-branch/)
+- [CreateAppRequest](https://apis.io/schemas/amazon-amplify/amazon-amplify-createapprequest/)
+- [CreateAppResult](https://apis.io/schemas/amazon-amplify/amazon-amplify-createappresult/)
+- [CreateBranchRequest](https://apis.io/schemas/amazon-amplify/amazon-amplify-createbranchrequest/)
+- [CreateDomainAssociationRequest](https://apis.io/schemas/amazon-amplify/amazon-amplify-createdomainassociationrequest/)
+- [GetAppResult](https://apis.io/schemas/amazon-amplify/amazon-amplify-getappresult/)
+- [ListAppsResult](https://apis.io/schemas/amazon-amplify/amazon-amplify-listappsresult/)
+- [ProductionBranch](https://apis.io/schemas/amazon-amplify/amazon-amplify-productionbranch/)
+- [UpdateAppRequest](https://apis.io/schemas/amazon-amplify/amazon-amplify-updateapprequest/)
+
+#### JSON Structure (10)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Amplify App Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-app-structure/)
+- [Amazon Amplify Branch Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-branch-structure/)
+- [Amazon Amplify Createapprequest Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-createapprequest-structure/)
+- [Amazon Amplify Createappresult Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-createappresult-structure/)
+- [Amazon Amplify Createbranchrequest Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-createbranchrequest-structure/)
+- [Amazon Amplify Createdomainassociationrequest Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-createdomainassociationrequest-structure/)
+- [Amazon Amplify Getappresult Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-getappresult-structure/)
+- [Amazon Amplify Listappsresult Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-listappsresult-structure/)
+- [Amazon Amplify Productionbranch Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-productionbranch-structure/)
+- [Amazon Amplify Updateapprequest Structure](https://apis.io/json-structure/amazon-amplify/amazon-amplify-updateapprequest-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Amplify Context](https://apis.io/jsonld/amazon-amplify/amazon-amplify-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Amplify Vocabulary](https://apis.io/vocabularies/amazon-amplify/amazon-amplify-vocabulary/)
+
+#### Examples (10)
+
+Example requests and responses.
+
+- [Amazon Amplify App Example](https://apis.io/examples/amazon-amplify/amazon-amplify-app-example/)
+- [Amazon Amplify Branch Example](https://apis.io/examples/amazon-amplify/amazon-amplify-branch-example/)
+- [Amazon Amplify Createapprequest Example](https://apis.io/examples/amazon-amplify/amazon-amplify-createapprequest-example/)
+- [Amazon Amplify Createappresult Example](https://apis.io/examples/amazon-amplify/amazon-amplify-createappresult-example/)
+- [Amazon Amplify Createbranchrequest Example](https://apis.io/examples/amazon-amplify/amazon-amplify-createbranchrequest-example/)
+- [Amazon Amplify Createdomainassociationrequest Example](https://apis.io/examples/amazon-amplify/amazon-amplify-createdomainassociationrequest-example/)
+- [Amazon Amplify Getappresult Example](https://apis.io/examples/amazon-amplify/amazon-amplify-getappresult-example/)
+- [Amazon Amplify Listappsresult Example](https://apis.io/examples/amazon-amplify/amazon-amplify-listappsresult-example/)
+- [Amazon Amplify Productionbranch Example](https://apis.io/examples/amazon-amplify/amazon-amplify-productionbranch-example/)
+- [Amazon Amplify Updateapprequest Example](https://apis.io/examples/amazon-amplify/amazon-amplify-updateapprequest-example/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [Amazon Amplify REST Apps API](https://apis.io/collections/amazon-amplify/open-amazon-amplify-apps-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Amazon Amplify Api Overlay](https://apis.io/overlays/amazon-amplify/amazon-amplify-api-overlay/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Amplify — jsonschema rules](https://apis.io/rules/amazon-amplify/amazon-amplify-jsonschema-spectral-rules/)
+- [Amazon Amplify API Rules](https://apis.io/rules/amazon-amplify/amazon-amplify-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Amplify Authentication](https://apis.io/security/amazon-amplify/amazon-amplify-authentication/)
+- [Amazon Amplify Domain Security](https://apis.io/security/amazon-amplify/amazon-amplify-domain-security/)
+- [Amazon Amplify Trust Center](https://apis.io/security/amazon-amplify/amazon-amplify-trust-center/)
+- [Amazon Amplify Vulnerability Disclosure](https://apis.io/security/amazon-amplify/amazon-amplify-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/amplify/)
 - [Documentation](https://docs.aws.amazon.com/amplify/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
+- [Sign up](https://signin.aws.amazon.com/signup?request_type=register)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/mobile/)
-- [GitHubOrganization](https://github.com/aws-amplify)
-- [Console](https://console.aws.amazon.com/amplify/)
-- [SignUp](https://signin.aws.amazon.com/signup?request_type=register)
-- [Login](https://aws.amazon.com/console/)
-- [Status](https://health.aws.amazon.com/health/status)
-- [KnowledgeCenter](https://repost.aws/knowledge-center)
-- [YouTube](https://www.youtube.com/user/AmazonWebServices)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/aws-amplify)
-- [Contact](https://aws.amazon.com/contact-us/)
-- [SpectralRules](rules/amazon-amplify-spectral-rules.yml)
-- [NaftikoCapability](capabilities/amplify-app-management.yaml)
-- [Vocabulary](vocabulary/amazon-amplify-vocabulary.yaml)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws-amplify)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| App Management | Create, update, and delete Amplify apps connected to Git repositories with automated build and deployment settings. |
-| Branch Management | Manage feature branches and environments with independent build configurations, environment variables, and preview URLs. |
-| Deployment Automation | Trigger and monitor deployments across branches with build history, logs, and status tracking. |
-| Domain Association | Associate custom domains with Amplify apps and manage SSL certificates and subdomain routing configurations. |
-| Backend Environment Management | Manage AWS backend environments linked to Amplify applications for full-stack cloud resource provisioning. |
+**Kin Score 52.9** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 65.8 |
+| Contract governance | 31.8 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 53.6 |
+| Access clarity | 52.6 |
 
-| Name | Description |
-|------|-------------|
-| CI/CD Pipeline Automation | Automate build and deployment workflows for frontend apps by programmatically managing Amplify apps and branch deployments. |
-| Multi-Environment Management | Manage development, staging, and production environments as separate branches with independent configurations. |
-| Infrastructure as Code | Provision and configure Amplify hosting environments as part of infrastructure-as-code pipelines using the REST API. |
-| Developer Portal Integration | Integrate Amplify app management into internal developer portals for self-service application deployment and hosting. |
+**Agent readiness 21.8** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| AWS CodeCommit | Connect Amplify apps to AWS CodeCommit repositories for source code hosting and automated deployments. |
-| GitHub | Link Amplify deployments to GitHub repositories with automatic builds triggered on pull requests and branch merges. |
-| AWS CloudFront | Amplify hosting uses CloudFront for global CDN distribution of static assets and dynamic content. |
-| AWS Route 53 | Configure custom domains for Amplify apps using Route 53 DNS management and SSL certificate provisioning. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-amplify/](https://apis.io/providers/amazon-amplify/).
 
-### OpenAPI
+## How this profile is made
 
-- [Amazon Amplify REST API OpenAPI](openapi/amazon-amplify-openapi.yaml)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### JSON Schema
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Amplify: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-- [amazon-amplify-app-schema.json](json-schema/amazon-amplify-app-schema.json)
-- [amazon-amplify-branch-schema.json](json-schema/amazon-amplify-branch-schema.json)
-- [amazon-amplify-createapprequest-schema.json](json-schema/amazon-amplify-createapprequest-schema.json)
-- [amazon-amplify-createappresult-schema.json](json-schema/amazon-amplify-createappresult-schema.json)
-- [amazon-amplify-createbranchrequest-schema.json](json-schema/amazon-amplify-createbranchrequest-schema.json)
-- [amazon-amplify-createdomainassociationrequest-schema.json](json-schema/amazon-amplify-createdomainassociationrequest-schema.json)
-- [amazon-amplify-getappresult-schema.json](json-schema/amazon-amplify-getappresult-schema.json)
-- [amazon-amplify-listappsresult-schema.json](json-schema/amazon-amplify-listappsresult-schema.json)
-- [amazon-amplify-productionbranch-schema.json](json-schema/amazon-amplify-productionbranch-schema.json)
-- [amazon-amplify-updateapprequest-schema.json](json-schema/amazon-amplify-updateapprequest-schema.json)
+## Open an issue
 
-## Capabilities
-
-- [Amazon Amplify API](capabilities/shared/amazon-amplify.yaml) — 2 operations for app management
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Amplify App Management](capabilities/amplify-app-management.yaml) | Amazon Amplify REST API | 2 | Frontend Developer, DevOps Engineer |
-
-## Vocabulary
-
-- [Amazon Amplify Vocabulary](vocabulary/amazon-amplify-vocabulary.yaml)
-
-## Rules
-
-- [Amazon Amplify Spectral Rules](rules/amazon-amplify-spectral-rules.yml) — 5 rules
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-amplify/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
